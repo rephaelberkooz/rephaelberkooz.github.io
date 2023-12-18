@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/rephaelberkooz.github.io/static/css/main.0365fb01.css",
+    "main.js": "/rephaelberkooz.github.io/static/js/main.4eb98fa4.js",
+    "static/js/787.2603f338.chunk.js": "/rephaelberkooz.github.io/static/js/787.2603f338.chunk.js",
+    "static/media/IMG_1158.jpg": "/rephaelberkooz.github.io/static/media/IMG_1158.e4f4377595f44a4b2bb8.jpg",
+    "static/media/resume_image.png": "/rephaelberkooz.github.io/static/media/resume_image.071c138b135a2c23fd44.png",
+    "index.html": "/rephaelberkooz.github.io/index.html",
+    "main.0365fb01.css.map": "/rephaelberkooz.github.io/static/css/main.0365fb01.css.map",
+    "main.4eb98fa4.js.map": "/rephaelberkooz.github.io/static/js/main.4eb98fa4.js.map",
+    "787.2603f338.chunk.js.map": "/rephaelberkooz.github.io/static/js/787.2603f338.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0365fb01.css",
+    "static/js/main.4eb98fa4.js"
+  ]
+}
