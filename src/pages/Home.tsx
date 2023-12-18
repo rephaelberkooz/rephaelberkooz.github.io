@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Link, Routes, Route } from 'react-router-dom';
-import picture from '../images/IMG_1158.jpg'
+import profile from '../images/IMG_1158.jpg'
 
 export const Home = () => {
     return (
@@ -11,7 +11,7 @@ export const Home = () => {
                 maxHeight: '100%',
             }}>
                 <img
-                    src={picture}
+                    src={profile}
                     alt="Casual Headshot"
                     style={{
                         maxWidth: '256px',
