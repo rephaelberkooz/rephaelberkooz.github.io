@@ -1,59 +1,35 @@
-import React, { ReactNode } from 'react';
-import { Link, Routes, Route } from 'react-router-dom';
-import picture from './images/IMG_1158.jpg'
-import { Home, Resume } from './pages/index.ts'
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-import './App.css';
+function App() {
+  const [count, setCount] = useState(0)
 
-export const App = () => {
   return (
-    <div style={{ background: 'lightgray' }}>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/resume' element={<Resume />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-      </Routes>
-    </div>
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
   )
 }
 
-const NavBar = () => {
-  return (
-    <div className='flex-container' style={{ backgroundColor: '#333' }}>
-      <NameHomeButton />
-      <nav>
-        <ul>
-          <a>
-            <Link to='/resume'>Resume</Link>
-          </a>
-          <a>
-            <Link to='/portfolio'>Portfolio</Link>
-          </a>
-        </ul>
-      </nav>
-    </div>
-  );
-}
-
-const NameHomeButton = () => {
-  return (
-    <div>
-      <h1>
-        <Link style={{ fontSize: 'xxx-large', color: 'white', textDecoration: 'none' }} to='/'>
-          Rephael Berkooz
-        </Link>
-      </h1>
-    </div>
-  );
-}
-
-const Portfolio = () => {
-  return (
-    // <Template>
-    <h2>Portfolio</h2>
-    // </Template>
-  );
-}
-
-
+export default App
