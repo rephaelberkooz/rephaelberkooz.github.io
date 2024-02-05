@@ -16,9 +16,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'quotes': ['error', 'single'],
+    // 'semi': ['error', 'always'],
     'indent': ['error', 2],
     'no-multi-spaces': ['error'],
     'no-console': 1,
-    'prettier/prettier': 2
+    'prettier/prettier': ["error", { "semi": false }],
   },
 }
