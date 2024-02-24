@@ -3,33 +3,75 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Link,
+  Stack,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import HomeIcon from "@mui/icons-material/Home";
+import { Route, Routes } from 'react-router';
 
+
+const NavBar = () => {
+  return (
+    <AppBar>
+      <Toolbar>
+        <IconButton size="large" edge="start" color="inherit">
+          <HomeIcon href={""}/>
+        </IconButton>
+        <Typography
+          variant="h6"
+          component="a"
+          href="/"
+          display="flex"
+          fontFamily="monospace"
+          fontWeight={700}
+          color="white"
+        >
+          Rephael Berkooz
+        </Typography>
+        <Stack direction="row" flexGrow={1}>
+          <Link href={""}>
+            <Button color="info">Home</Button>
+          </Link>
+          <Link href={"about-me"}>
+            <Button color="info">About Me</Button>
+          </Link>
+        </Stack>
+      </Toolbar>
+    </AppBar>
+  )
+}
+
+const Home = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <NavBar />
     </>
   )
 }
 
-export default App
+const About = () => {
+  return (
+    <>
+      <NavBar />
+    </>
+  )
+}
+
+export const App = () => {
+  return (
+    <>
+      <Routes>
+        <Route path="" element={<Home />} />
+        <Route path="about-me" element={<About />} />
+      </Routes>
+    </>
+  )
+}
+
