@@ -1,7 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 import {
   AppBar,
@@ -14,16 +11,17 @@ import {
   Typography,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
-import { Route, Routes } from 'react-router';
 
+import { Route, Routes } from "react-router";
 
 const NavBar = () => {
   return (
     <AppBar>
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit">
-          <HomeIcon href={""}/>
+          <HomeIcon href="/" />
         </IconButton>
+
         <Typography
           variant="h6"
           component="a"
@@ -36,33 +34,36 @@ const NavBar = () => {
           Rephael Berkooz
         </Typography>
         <Stack direction="row" flexGrow={1}>
-          <Link href={""}>
-            <Button color="info">Home</Button>
-          </Link>
           <Link href={"about-me"}>
             <Button color="info">About Me</Button>
           </Link>
         </Stack>
       </Toolbar>
     </AppBar>
-  )
-}
+  );
+};
 
 const Home = () => {
   return (
     <>
       <NavBar />
+      <Box>
+        <Typography variant="h3">Rephael Berkooz</Typography>
+        <Typography variant="h5" alignContent={"center"}>
+          Experienced Full-Stack Software Engineer{" "}
+        </Typography>
+      </Box>
     </>
-  )
-}
+  );
+};
 
 const About = () => {
   return (
     <>
       <NavBar />
     </>
-  )
-}
+  );
+};
 
 export const App = () => {
   return (
@@ -72,6 +73,5 @@ export const App = () => {
         <Route path="about-me" element={<About />} />
       </Routes>
     </>
-  )
-}
-
+  );
+};
