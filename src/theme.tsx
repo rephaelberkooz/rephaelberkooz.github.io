@@ -3,9 +3,13 @@ import { createTheme, colors } from "@mui/material";
 export const THEME = createTheme({
   palette: {
     primary: {
-      main: colors.blue[300],
-      light: colors.blue[200],
-      dark: colors.blue[400],
+      main: colors.grey[300],
+      light: colors.grey[200],
+      dark: colors.grey[400],
+    },
+    text: {
+      primary: colors.grey[600],
+      secondary: colors.grey[500],
     },
     secondary: {
       main: colors.red[300],
