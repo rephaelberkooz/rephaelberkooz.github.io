@@ -35,7 +35,7 @@ export const NavBar = () => {
 
   return (
     <AppBar>
-      <Container maxWidth="xl">
+      <Container maxWidth={false}>
         <Toolbar>
           <Typography
             variant="h5"
@@ -91,7 +91,7 @@ export const NavBar = () => {
                   textAlign="center"
                   color={theme.palette.text.primary}
                 >
-                  About Me
+                  {aboutMe}
                 </Typography>
               </MenuItem>
             </Menu>
@@ -116,8 +116,8 @@ export const NavBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
-              sx={{ my: 2, color: "white", display: "block" }}
-              href="about-me"
+              sx={{ my: 2, color: "inherit", display: "block" }}
+              href="/about-me"
             >
               {aboutMe}
             </Button>
