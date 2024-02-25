@@ -35,7 +35,7 @@ export const Home = () => {
             <Link href="https://github.com/rephaelberkooz">
               <b>GitHub</b>
             </Link>
-            &nbsp;contributions or connect with me on&nbsp;
+            &nbsp;contributions, or connect with me on&nbsp;
             <Link href="https://www.linkedin.com/in/rephael-berkooz/">
               <b>LinkedIn</b>
             </Link>
