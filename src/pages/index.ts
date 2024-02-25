@@ -1,2 +1,4 @@
-export { Home } from './Home.tsx'
-export { Resume } from './Resume.tsx'
+export * from "./About";
+export * from "./Error";
+export * from "./Home";
+export * from "./Resume";
