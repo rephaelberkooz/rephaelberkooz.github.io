@@ -1,13 +1,16 @@
 {
-  "name": "vite-project",
+  "name": "rephaelberkooz.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://rephaelberkooz.github.io/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -16,6 +19,7 @@
     "@mui/icons-material": "^5.15.10",
     "@mui/material": "^5.15.10",
     "@types/eslint": "^8.56.3",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

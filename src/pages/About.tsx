@@ -1,7 +1,6 @@
 import { Box, Container, Link, Stack, Typography } from "@mui/material";
 import { NavBar } from "../components";
 import { Resume } from ".";
-import { ArrowDownward } from "@mui/icons-material";
 
 export const About = () => {
   return (
