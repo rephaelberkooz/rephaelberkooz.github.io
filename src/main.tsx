@@ -1,8 +1,11 @@
+import "./index.css";
+
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
 import { ThemeProvider } from "@mui/material";
+
 import { THEME } from "./theme.tsx";
 import { About, Error, Home } from "./pages";
 

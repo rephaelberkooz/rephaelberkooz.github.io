@@ -1,81 +1,61 @@
-import {
-  Box,
-  Container,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Box, Container, Link, Stack, Typography } from "@mui/material";
 import { NavBar } from "../components";
-import { MenuBook } from "@mui/icons-material";
+import { Resume } from ".";
+import { ArrowDownward } from "@mui/icons-material";
 
 export const About = () => {
-  const theme = useTheme();
   return (
-    <>
+    <Container maxWidth={false} sx={{ overflowY: "scroll" }}>
       <NavBar />
-      <Container maxWidth={false}>
+      <Stack spacing={24}>
         <Stack
-          spacing={2}
-          divider={
-            <Divider
-              orientation="horizontal"
-              flexItem
-              color={theme.palette.text.secondary}
-            />
-          }
-          sx={{ minWidth: "512px" }}
+          direction={"row"}
+          maxWidth={"1024px"}
+          justifyContent="space-between"
         >
-          <Stack spacing={1}>
-            <Typography variant="h5">Employment History</Typography>
-            <Stack direction={"row"} justifyContent={"space-between"}>
-              <Typography variant="body1">
+          <Stack spacing={2}>
+            {/* <Typography variant="h5">My Bio</Typography> */}
+            <Typography variant="body1">
+              I work as a software engineer at&nbsp;
+              <Link href={"https://tulip.co"}>
                 <b>Tulip Interfaces</b>
-              </Typography>
-              <Typography variant="body1">
-                <i>June 2021 - Present</i>
-              </Typography>
-            </Stack>
-            <Typography variant="body2">
-              Series C startup from MIT - an IoT and cloud platform for
-              manufacturing data and operations.
+              </Link>
+              , a series C startup out of the MIT Media Lab. My work centers on
+              creating technology for data insights in manufacturing and
+              operations. This includes full-stack development of an
+              enterprise&nbsp;
+              <Link href={"https://tulip.co/platform/analytics/"}>
+                <b>data querying and visualization platform</b>
+              </Link>
+              , in addition to the underlying data systems. I've contributed to
+              a number of other projects at Tulip, including product usage data
+              science/engineering and&nbsp;
+              <Link href="https://tulip.co/blog/state-detection-coffee-machine/">
+                <b>iot machine learning development</b>
+              </Link>
+              .
+            </Typography>
+            <Typography variant="body1">
+              Outside of Tulip, I am working on a&nbsp;
+              <Link href="https://github.com/rephaelberkooz/HRTF-Research">
+                <b>project</b>
+              </Link>
+              &nbsp;utilizing signal processing methods to better understand
+              auditory cognition. Additionally, I am learning Rust for use in a
+              smart-home iot project.
             </Typography>
           </Stack>
-
-          <Stack spacing={1}>
-            <Typography variant="h5">Educaton</Typography>
-            <Stack direction={"row"} justifyContent={"space-between"}>
-              <Typography variant="body1">
-                <b>The College of Wooster</b>
-              </Typography>
-              <Typography variant="body1">
-                <i>August 2017 - May 2021</i>
-              </Typography>
-            </Stack>
-            <Typography variant="body2">
-              B.A. Mathematics - Cum Laude, Minor in Computer Science
-            </Typography>
-            <List>
-              <ListItem>
-                <ListItemIcon>
-                  <MenuBook color="primary" />
-                </ListItemIcon>
-                <ListItemText>
-                  <Typography variant="body2">
-                    B.A. Mathematics - Cum Laude, Minor in Computer Science
-                  </Typography>
-                </ListItemText>
-              </ListItem>
-            </List>
-          </Stack>
-          <Typography>Item 3</Typography>
-          <Typography>Item 4</Typography>
+          <Box paddingLeft={10}>
+            <img
+              width={"220px"}
+              src={"/photo.jpg?w=161&fit=crop&auto=format"}
+              alt={"Rephael - New Years 2024"}
+              loading="lazy"
+            />
+          </Box>
         </Stack>
-      </Container>
-    </>
+        <Resume />
+      </Stack>
+    </Container>
   );
 };
