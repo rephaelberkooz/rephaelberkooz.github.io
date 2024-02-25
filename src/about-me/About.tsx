@@ -1,17 +1,6 @@
-import {
-  Box,
-  Container,
-  Link,
-  Stack,
-  ThemeProvider,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Link, Stack, Typography } from "@mui/material";
 import { NavBar } from "../components";
 import { Resume } from "../pages";
-import ReactDOM from "react-dom/client";
-import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { THEME } from "../theme";
 
 export const About = () => {
   return (
@@ -69,15 +58,3 @@ export const About = () => {
     </Container>
   );
 };
-
-ReactDOM.createRoot(document.getElementById("about-me")!).render(
-  <React.StrictMode>
-    <ThemeProvider theme={THEME}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/about-me" element={<About />} />
-        </Routes>
-      </BrowserRouter>
-    </ThemeProvider>
-  </React.StrictMode>,
-);

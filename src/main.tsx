@@ -13,7 +13,7 @@ import {
 import { ThemeProvider } from "@mui/material";
 
 import { THEME } from "./theme.tsx";
-import { About, Home } from "./pages";
+import { Home } from "./pages";
 
 // const router = createBrowserRouter([
 //   {
@@ -30,7 +30,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about-me" element={<About />} />
+          {/* <Route path="/about-me" element={<About />} /> */}
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
