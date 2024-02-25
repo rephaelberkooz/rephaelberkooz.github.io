@@ -27,7 +27,7 @@ export const Home = () => {
             manufacturing and operations.
           </Typography>
           <Typography paragraph={true}>
-            Learn
+            Learn&nbsp;
             <Link href="/about-me">
               <b>a bit about me</b>
             </Link>
