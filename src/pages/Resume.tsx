@@ -1,5 +1,5 @@
 import { Calculate, Code, Computer, School, Science } from "@mui/icons-material";
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import { Page } from "../components/Page";
 import { Position } from "../components";
 
