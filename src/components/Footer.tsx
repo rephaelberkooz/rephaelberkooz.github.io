@@ -6,9 +6,9 @@ export const Footer = () => {
       component="footer"
       sx={{
         py: 3,
-        mt: "auto",
+        mt: 'auto',
         backgroundColor: (theme) => theme.palette.grey[100],
-        width: "100vw",
+        width: '100vw',
         mx: { xs: -2, sm: -3 },
       }}
     >

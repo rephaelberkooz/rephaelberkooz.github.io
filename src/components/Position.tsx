@@ -5,7 +5,7 @@ import { ListItemWithIcon } from "./ListItemWithIcon";
 export const Position = (props: {
   title?: string;
   company: string;
-  dateRange: string;
+  dateRange?: string;
   description: string;
   bulletPoints: string[];
   bulletIcon: React.ReactNode;
@@ -21,9 +21,11 @@ export const Position = (props: {
         <Typography variant="body1">
           <b>{props.company}</b>
         </Typography>
-        <Typography variant="body1">
-          <i>{props.dateRange}</i>
-        </Typography>
+        {props.dateRange && (
+          <Typography variant="body1">
+            <i>{props.dateRange}</i>
+          </Typography>
+        )}
       </Stack>
       <Typography variant="body2">{props.description}</Typography>
       <List>
