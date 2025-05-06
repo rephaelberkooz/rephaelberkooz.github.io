@@ -7,7 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "@mui/material";
 
 import { THEME } from "./theme.tsx";
-import { About, Error, Home } from "./pages";
+import { About, Error, Home, Resume } from "./pages";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +16,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
   },
   { path: "/about-me", element: <About /> },
+  { path: "/resume", element: <Resume /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

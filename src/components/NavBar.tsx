@@ -32,6 +32,7 @@ export const NavBar = () => {
 
   const fullName = "Rephael Berkooz";
   const aboutMe = "About Me";
+  const resume = "Resume";
 
   return (
     <>
@@ -95,6 +96,14 @@ export const NavBar = () => {
                     {aboutMe}
                   </Typography>
                 </MenuItem>
+                <MenuItem onClick={() => navigate("/resume")}>
+                  <Typography
+                    textAlign="center"
+                    color={theme.palette.text.primary}
+                  >
+                    {resume}
+                  </Typography>
+                </MenuItem>
               </Menu>
             </Box>
             <Typography
@@ -122,11 +131,17 @@ export const NavBar = () => {
               >
                 {aboutMe}
               </Button>
+              <Button
+                sx={{ my: 2, color: "inherit", display: "block" }}
+                href="/resume"
+              >
+                {resume}
+              </Button>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
-      <Box minHeight={"156px"}></Box>
+      <Box minHeight={"80px"}></Box>
     </>
   );
 };

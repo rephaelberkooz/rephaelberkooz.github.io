@@ -1,60 +1,46 @@
-import { Box, Container, Link, Stack, Typography } from "@mui/material";
-import { NavBar } from "../components";
-import { Resume } from ".";
+import { Box, Link, Stack, Typography } from "@mui/material";
+import { Page } from "../components/Page";
 
 export const About = () => {
   return (
-    <Container maxWidth={false} sx={{ overflowY: "scroll" }}>
-      <NavBar />
-      <Stack spacing={24}>
-        <Stack
-          direction={"row"}
-          maxWidth={"1024px"}
-          justifyContent="space-between"
-        >
-          <Stack spacing={2}>
-            {/* <Typography variant="h5">My Bio</Typography> */}
-            <Typography variant="body1">
-              I work as a software engineer at&nbsp;
-              <Link href={"https://tulip.co"}>
-                <b>Tulip Interfaces</b>
-              </Link>
-              , a series C startup out of the MIT Media Lab. My work centers on
-              creating technology for data insights in manufacturing and
-              operations. This includes full-stack development of an
-              enterprise&nbsp;
-              <Link href={"https://tulip.co/platform/analytics/"}>
-                <b>data querying and visualization platform</b>
-              </Link>
-              , in addition to the underlying data systems. I've contributed to
-              a number of other projects at Tulip, including product usage data
-              science/engineering and&nbsp;
-              <Link href="https://tulip.co/blog/state-detection-coffee-machine/">
-                <b>iot machine learning development</b>
-              </Link>
-              .
-            </Typography>
-            <Typography variant="body1">
-              Outside of Tulip, I am working on a&nbsp;
-              <Link href="https://github.com/rephaelberkooz/HRTF-Research">
-                <b>project</b>
-              </Link>
-              &nbsp;utilizing signal processing methods to better understand
-              auditory cognition. Additionally, I am learning Rust for use in a
-              smart-home iot project.
-            </Typography>
-          </Stack>
-          <Box paddingLeft={10}>
-            <img
-              width={"220px"}
-              src={"/photo.jpg?w=161&fit=crop&auto=format"}
-              alt={"Rephael - New Years 2024"}
-              loading="lazy"
-            />
-          </Box>
+    <Page>
+      <Box
+        sx={{
+          maxWidth: "1024px",
+          margin: "0 auto",
+          minHeight: "75vh",
+          paddingTop: "15vh"
+        }}
+      >
+        <Stack spacing={2} flex={1}>
+          <Typography variant="body1" color="text.primary">
+            I am an independent software engineer, contracting in SaaS/consulting, specializing in AI agentic systems and machine learning.
+            <br />
+            Previously, I worked as a software engineer at&nbsp;
+            <Link href="https://podium.com">
+              <b>Podium</b>
+            </Link>
+            , creating agentic systems for communicating with customers at small and medium-sized businesses.
+            <br />
+            Prior to Podium, I was a software engineer at&nbsp;
+            <Link href="https://tulip.co">
+              <b>Tulip Interfaces</b>
+            </Link>
+            , a series C startup out of the MIT Media Lab. Where I created
+            technology for data insights in manufacturing and operations. This
+            included full-stack development of an enterprise&nbsp;
+            <Link href="https://tulip.co/platform/analytics/">
+              <b>data querying and visualization platform</b>
+            </Link>
+            , in addition to the underlying data and query systems. I also led the
+            development of machine learning and statistical control tools, including&nbsp;
+            <Link href="https://tulip.co/blog/state-detection-coffee-machine/">
+              <b>iot machine learning development</b>
+            </Link>
+            . I began my career as a data scientist, building pricing/usage models and data engineering pipelines.
+          </Typography>
         </Stack>
-        <Resume />
-      </Stack>
-    </Container>
+      </Box>
+    </Page>
   );
 };

@@ -1,32 +1,37 @@
-import { Box, Container, Link, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
+import { Page } from "../components/Page";
 
 export const Home = () => {
   return (
-    <Container maxWidth={false}>
+    <Page>
       <Box
-        textAlign={"center"}
-        alignContent={"center"}
-        sx={{ display: "grid", rowGap: 2 }}
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          maxWidth: "1024px",
+          margin: "0 auto",
+          minHeight: "75vh",
+          justifyContent: "flex-start",
+          paddingTop: "15vh"
+        }}
       >
-        <Typography variant="h3">Rephael Berkooz</Typography>
-        <Typography variant="h5">Full-Stack Software Engineer</Typography>
         <Box
-          textAlign={"center"}
-          maxWidth={720}
-          sx={{ display: "grid", rowGap: 0 }}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 2,
+            maxWidth: 720
+          }}
         >
-          <Typography paragraph={true}>
-            I write software at&nbsp;
-            <Link href="https://tulip.co">
-              <b>Tulip Interfaces</b>
-            </Link>
-            .
+          <Typography variant="h3" color="text.primary">
+            Rephael Berkooz
           </Typography>
-          <Typography paragraph={true}>
-            My work centers on creating technology for data insights in
-            manufacturing and operations.
+          <Typography paragraph>
+            Full-stack software engineer, specializing in AI agentic systems and machine learning.
           </Typography>
-          <Typography paragraph={true}>
+          <Typography>
             Learn&nbsp;
             <Link href="/about-me">
               <b>a bit about me</b>
@@ -43,6 +48,6 @@ export const Home = () => {
           </Typography>
         </Box>
       </Box>
-    </Container>
+    </Page>
   );
 };
