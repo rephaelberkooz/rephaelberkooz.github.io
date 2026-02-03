@@ -6,7 +6,7 @@ export const About = () => {
     <Page>
       <Stack spacing={2} flex={1}>
         <Typography variant="body1" color="text.primary">
-          I am currently work at&nbsp;
+          I currently work at&nbsp;
           <Link href="https://www.proofpoint.com">
             <b>Proofpoint</b>
           </Link>
