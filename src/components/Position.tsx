@@ -12,20 +12,24 @@ export const Position = (props: {
 }) => {
   return (
     <>
-      <Stack direction={"row"} justifyContent={"space-between"}>
-        {props.title && (
+      <Stack spacing={1}>
+        <Stack direction={"row"} justifyContent={"center"}>
           <Typography variant="body1">
-            <b>{props.title}</b>
+            <b>{props.company}</b>
           </Typography>
-        )}
-        <Typography variant="body1">
-          <b>{props.company}</b>
-        </Typography>
-        {props.dateRange && (
-          <Typography variant="body1">
-            <i>{props.dateRange}</i>
-          </Typography>
-        )}
+        </Stack>
+        <Stack direction={"row"} justifyContent={"space-between"}>
+          {props.title && (
+            <Typography variant="body1">
+              <b>{props.title}</b>
+            </Typography>
+          )}
+          {props.dateRange && (
+            <Typography variant="body1">
+              <i>{props.dateRange}</i>
+            </Typography>
+          )}
+        </Stack>
       </Stack>
       <Typography variant="body2">{props.description}</Typography>
       <List>

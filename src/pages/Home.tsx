@@ -17,7 +17,7 @@ export const Home = () => {
           Rephael Berkooz
         </Typography>
         <Typography paragraph>
-          Full-stack software engineer, specializing in AI agentic systems and machine learning.
+          Full-stack software engineer, specializing in machine learning and AI products.
         </Typography>
         <Typography>
           Learn&nbsp;

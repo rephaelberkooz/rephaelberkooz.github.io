@@ -6,7 +6,11 @@ export const About = () => {
     <Page>
       <Stack spacing={2} flex={1}>
         <Typography variant="body1" color="text.primary">
-          I am an independent software engineer, contracting in SaaS/consulting, specializing in AI agentic systems and machine learning.
+          I am currently work at&nbsp;
+          <Link href="https://www.proofpoint.com">
+            <b>Proofpoint</b>
+          </Link>
+          , building AI systems for the Nuclei team.
           <br />
           Previously, I worked as a software engineer at&nbsp;
           <Link href="https://podium.com">
@@ -18,7 +22,7 @@ export const About = () => {
           <Link href="https://tulip.co">
             <b>Tulip Interfaces</b>
           </Link>
-          , a series C startup out of the MIT Media Lab. Where I created
+          , a startup out of the MIT Media Lab. Where I created
           technology for data insights in manufacturing and operations. This
           included full-stack development of an enterprise&nbsp;
           <Link href="https://tulip.co/platform/analytics/">
@@ -29,7 +33,7 @@ export const About = () => {
           <Link href="https://tulip.co/blog/state-detection-coffee-machine/">
             <b>iot machine learning development</b>
           </Link>
-          . I began my career as a data scientist, building pricing/usage models and data engineering pipelines.
+          . I began my career as a data scientist, building pricing/usage models and data pipelines.
         </Typography>
       </Stack>
     </Page>
